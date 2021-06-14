@@ -1,5 +1,9 @@
+.div-s-Arte {
+  margin-top: 70px;
+}
+
 .div-s-Arte h2 {
-  margin-left: 10vh;
+  margin-left: 5vw;
 }
 
 .slide {
@@ -8,6 +12,8 @@
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 5vh;
+  -webkit-box-shadow: 0 0 20px black;
+          box-shadow: 0 0 20px black;
 }
 
 .container {
@@ -16,10 +22,27 @@
 }
 
 .container .card {
-  margin-top: 2vh;
+  margin-top: 4vh;
   margin-left: 2vw;
   margin-right: 2vw;
   float: left;
+}
+
+.container .card .card-text {
+  text-align: justify;
+}
+
+.container .card img {
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.container .card img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0 0 20px black;
+          box-shadow: 0 0 20px black;
+  border-radius: 8px;
 }
 
 .container .card2 {
@@ -28,5 +51,105 @@
 
 .container .card3 {
   text-align: center;
+}
+
+footer {
+  background-color: #666;
+  padding-top: 5em;
+  padding-bottom: 40px;
+  border-top: 5px solid #3381f3;
+}
+
+footer footer h2, footer footer p, footer footer a, footer footer span {
+  color: #D1D1D1;
+}
+
+footer footer h2 {
+  font-weight: 400;
+}
+
+footer a {
+  text-decoration: none !important;
+  outline: none !important;
+  font-size: 20px !important;
+  color: #D1D1D1 !important;
+}
+
+footer footer ul {
+  padding: 0;
+}
+
+footer footer li {
+  list-style: none;
+}
+
+.footer-box {
+  width: 31%;
+  padding: 1%;
+  float: left;
+  margin-left: 10vw;
+}
+
+footer .wrapper:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.company-footer {
+  width: 80%;
+}
+
+.company-footer p {
+  margin-bottom: 20px;
+}
+
+.footer-list li {
+  margin-bottom: 15px;
+}
+
+.footer-list a {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.footer-list a:hover {
+  color: #FFF;
+}
+
+.footer-list li:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.articles-footer {
+  width: 80%;
+}
+
+.footer-list.footer-article-list span {
+  display: block;
+  float: none;
+}
+
+.fab {
+  font-size: 30px;
+  margin-right: 10px;
+  float: left;
+}
+
+.footer-list li span {
+  float: left;
+  height: 30px;
+  line-height: 30px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #B2B2;
+}
+
+.footer-bottom p {
+  font-weight: 600px;
+  margin-top: 40px;
 }
 /*# sourceMappingURL=scss.css.map */
