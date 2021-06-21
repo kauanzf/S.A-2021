@@ -22,7 +22,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Principal</a>
+                <a class="nav-link active" aria-current="page" th:href="@{/}">Principal</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#Carrossel">Carrossel</a>
@@ -50,6 +50,9 @@
         </div>
       </nav>
     </center>
+
+    <!-- <div class="star"></div>-->
+
       <div class="div-s-Arte">
           <h2>SEMANA DE ARTE - SENAI 2021</h2>
       </div>
@@ -90,7 +93,7 @@
         <div id="oPredio" class="card-body">
           <h5 class="card-title">O Prédio</h5>
           <p class="card-text">Um prédio pensado e criado pelos arquitetos mais renomados do mundo, entregando luxo e conforto aos seus residentes. </p>
-          <a href="#" class="btn btn-primary">Conhecer mais</a>
+          <a th:href="@{/predio/predio}"class="btn btn-primary">Conhecer mais</a>
         </div>
       </div>
 
@@ -99,7 +102,7 @@
         <div id="oJardim" class="card-body">
           <h5 class="card-title">O Jardim</h5>
           <p class="card-text">O jardim do (colocar nome) é do mais alto nível possível, com correntes de água, fonte, áreas de lazer e muito mais.</p>
-          <a href="#" class="btn btn-primary">Conhecer mais</a>
+          <a th:href="@{/jardim/jardim}" class="btn btn-primary">Conhecer mais</a>
         </div>
       </div>
 
@@ -108,22 +111,44 @@
         <div id="oMonumento" class="card-body">
           <h5 class="card-title">O monumento</h5>
           <p class="card-text">Um monumento criado pelos maiores artista do mundo, utlizando o estilo de pop art com cores fortes e unicidade.</p>
-          <a href="#" class="btn btn-primary">Conhecer mais</a>
+          <a th:href="@{/monumento/monumento}" class="btn btn-primary">Conhecer mais</a>
         </div>
       </div>  
       </center>
           
       </div>
       <br>
+      <div class="container container-cargo-btn-novo ">
+        <a th:href="@{/index/add}"
+           class="btn btn-outline-dark">
+            <i class="fa fa-file"></i> Novo
+        </a>
+    </div>
+      <div class="comentarios">
 
+        <div class="card" 
+        th:each="comentario : ${comentarios}">
+          <div class="card-header">
+            <label th:text="${comentario.nome}"></label>
+          </div>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p th:text="${comentario.comentario}">
+                
+              </p>
+              <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+            </blockquote>
+          </div>
+        </div>
 
-    
-    <footer>
+    </div>
+   
+    <footer class="final" th:style="'background: url(/img/pop-art-body.jpg);'">
       <div class="wrapper"> 
           <div class="footer-box">
             <div class="company-footer">
               <h2>Equipe S.A</h2>
-              <p>cezinha & Cia</p>
+              <p class="ff">cezinha & Cia</p>
             </div>
         </div>
         <div class="footer-box">
@@ -131,8 +156,18 @@
             <h2>Github</h2>
               <ul class="footer-list footer-article-list">
                 <li>
-                <a style="text-decoration: none;" href="https://github.com/Cezar-Peterson">Cezar.</a>
-                <span class="article-date">Sim</span>
+                <a style="text-decoration: none;" href="https://github.com/Cezar-Peterson">Cezar Peterson Campos</a>
+                <br>
+                <a style="text-decoration: none;" href="https://github.com/kuannzf">Kauan Zanella Fernandes</a>
+                <br>
+                <a style="text-decoration: none;" href="https://github.com/SofiaBenedet">Sofia Benedet Brandl</a>
+                <br>
+                <a style="text-decoration: none;" href="https://github.com/emilicosta">Emili Costa</a>
+                <br>
+                <a style="text-decoration: none;" href="https://github.com/LuanaFurini">Luana Furini</a>
+                <br>
+                <a style="text-decoration: none;" href="https://github.com/manuolivera">Emanuelli de Oliveira</a>
+                <!--<span class="article-date">Sim</span> -->
                 </li>
               </ul>   
           </div>
@@ -145,7 +180,9 @@
       <script src="@{/js/popper.min.js}"></script>
       <script th:src="@{/bootstrap-5.0.0/js/bootstrap.min.js}"></script>
       
-
+      
+      
+      
 
 
 </body>

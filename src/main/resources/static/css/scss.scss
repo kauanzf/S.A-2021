@@ -1,10 +1,16 @@
 $c-t: red;
 
 
+body{
+  background: linear-gradient(#00002e, rgb(31, 68, 231));
+}
+
 .div-s-Arte{
     margin-top: 70px;
     h2{
         margin-left: 5vw;
+        color: white;
+        text-shadow: 0 0 10px black;
     }
 }
 
@@ -52,7 +58,7 @@ width: 90%;
 }
 
 } 
-footer {
+footer.final {
     background-color: #666;
     padding-top: 5em;
     padding-bottom: 40px;
@@ -71,7 +77,8 @@ a{
   text-decoration: none !important;
   outline: none !important;
   font-size: 20px !important;
-  color:#D1D1D1 !important; 
+  color:#000000 !important; 
+  font-weight: bold;
 }
 
 
@@ -160,4 +167,48 @@ footer li{
     margin-top: 40px;
   }
 
+//  .star{
+ //   margin-top: 60px;
+  //  width: 4px;
+   // height: 4px;
+    //background-color: white;
+    // box-shadow: 20px 20px 0 white;
+  // }
+
+  .comentarios{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 40px;
+    .card{
+      margin-bottom: 20px;
+    }
+  }
+
+  .text-predio{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 40px;
+    width: 80%;
+    height: auto;
+    background-color: rgb(0, 142, 224);
+    font-size: 35px;
+    text-align: justify;
+    padding: 32px;
+    color: white;
+    font-style: italic;
+    border: 16px double;
+  }
+
+ 
+.ff{
+  color:#000000 !important; 
+  font-weight: bold;
+}
   
+
+.container-cargo-btn-novo {
+  width:80%;
+  text-align: right;
+  margin-bottom: 8px;
+}

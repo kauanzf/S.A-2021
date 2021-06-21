@@ -1,9 +1,16 @@
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#00002e), to(#1f44e7));
+  background: linear-gradient(#00002e, #1f44e7);
+}
+
 .div-s-Arte {
   margin-top: 70px;
 }
 
 .div-s-Arte h2 {
   margin-left: 5vw;
+  color: white;
+  text-shadow: 0 0 10px black;
 }
 
 .slide {
@@ -53,33 +60,34 @@
   text-align: center;
 }
 
-footer {
+footer.final {
   background-color: #666;
   padding-top: 5em;
   padding-bottom: 40px;
   border-top: 5px solid #3381f3;
 }
 
-footer footer h2, footer footer p, footer footer a, footer footer span {
+footer.final footer h2, footer.final footer p, footer.final footer a, footer.final footer span {
   color: #D1D1D1;
 }
 
-footer footer h2 {
+footer.final footer h2 {
   font-weight: 400;
 }
 
-footer a {
+footer.final a {
   text-decoration: none !important;
   outline: none !important;
   font-size: 20px !important;
-  color: #D1D1D1 !important;
+  color: #000000 !important;
+  font-weight: bold;
 }
 
-footer footer ul {
+footer.final footer ul {
   padding: 0;
 }
 
-footer footer li {
+footer.final footer li {
   list-style: none;
 }
 
@@ -151,5 +159,42 @@ footer .wrapper:after {
 .footer-bottom p {
   font-weight: 600px;
   margin-top: 40px;
+}
+
+.comentarios {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 40px;
+}
+
+.comentarios .card {
+  margin-bottom: 20px;
+}
+
+.text-predio {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 40px;
+  width: 80%;
+  height: auto;
+  background-color: #008ee0;
+  font-size: 35px;
+  text-align: justify;
+  padding: 32px;
+  color: white;
+  font-style: italic;
+  border: 16px double;
+}
+
+.ff {
+  color: #000000 !important;
+  font-weight: bold;
+}
+
+.container-cargo-btn-novo {
+  width: 80%;
+  text-align: right;
+  margin-bottom: 8px;
 }
 /*# sourceMappingURL=scss.css.map */
