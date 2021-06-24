@@ -12,6 +12,10 @@ public class Comentario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    
+    @Size(max = 20)
+    @NotNull
+    private String titulo;
 
     @Size(max=30)
     @NotNull
@@ -19,7 +23,7 @@ public class Comentario {
 
     @Size(max = 120)
     @NotNull
-    private String comentario;
+    private String opiniao;
 
     public Long getId() {
         return id;
@@ -38,19 +42,28 @@ public class Comentario {
     }
 
     public String getComentario() {
-        return comentario;
+        return opiniao;
     }
 
     public void setComentario(String comentario) {
-        this.comentario = comentario;
+        this.opiniao = comentario;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
     @Override
     public String toString() {
-        return "index{" +
+        return "Comentario{" +
                 "id=" + id +
+                ", titulo='" + titulo + '\'' +
                 ", nome='" + nome + '\'' +
-                ", comentario='" + comentario + '\'' +
+                ", comentario='" + opiniao + '\'' +
                 '}';
     }
 }

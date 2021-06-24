@@ -16,4 +16,14 @@ public class ComentarioServiceImpl implements ComentarioService{
     public List<Comentario> findAll(){
         return comentarioRepository.findAll();
     }
+
+    @Override
+    public boolean save(Comentario comentario) {
+        try {
+            comentarioRepository.save(comentario);
+            return true;
+        }catch (Exception e){
+            return false;
+        }
+    }
 }

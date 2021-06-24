@@ -32,15 +32,13 @@
                   Cards
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#oPredio">O Prédio</a></li>
+                  <li><a class="dropdown-item" href="#divCards">O Prédio</a></li>
                   <li><a class="dropdown-item" href="#oJardim">O jardim</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#oMonumento">O monumento</a></li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
+    
             </ul>
             <form class="d-flex">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -66,13 +64,13 @@
         </div>
         <div id="Carrossel" class="carousel-inner">
           <div class="carousel-item active">
-            <img th:src="@{/img/ProntoDia.png}" class="d-block w-100" alt="...">
+            <img th:src="@{/img/img2/fachada.jpeg}" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img th:src="@{/img/ProntoNoite.png}" class="d-block w-100" alt="...">
+            <img th:src="@{/img/img2/monumentoNoiteD.jpeg}" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img th:src="@{/img/monumento2.png}" class="d-block w-100" alt="...">
+            <img th:src="@{/img/img2/FotoJardim.jpeg}" class="d-block w-100" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -85,11 +83,11 @@
         </button>
       </div>
 
-      <div class="container col d-flex justify-content-center">
+      <div class="container col d-flex justify-content-center" id="divCards">
           <center>
           
              <div class="card" style="width: 18rem;">
-        <img th:src="@{/img/ProntoDia.png}" class="card-img-top" alt="...">
+        <img th:src="@{/img/img2/fachada.jpeg}" class="card-img-top" alt="...">
         <div id="oPredio" class="card-body">
           <h5 class="card-title">O Prédio</h5>
           <p class="card-text">Um prédio pensado e criado pelos arquitetos mais renomados do mundo, entregando luxo e conforto aos seus residentes. </p>
@@ -98,16 +96,16 @@
       </div>
 
       <div class="card card2" style="width: 18rem;">
-        <img th:src="@{/img/jardim.png}" class="card-img-top" alt="...">
+        <img th:src="@{/img/img2/JardimDiagonal.jpeg}" class="card-img-top" alt="...">
         <div id="oJardim" class="card-body">
           <h5 class="card-title">O Jardim</h5>
-          <p class="card-text">O jardim do (colocar nome) é do mais alto nível possível, com correntes de água, fonte, áreas de lazer e muito mais.</p>
+          <p class="card-text">O jardim Andy Warhol é de mais alto nível possível, com correntes de água, fonte, áreas de lazer e muito mais.</p>
           <a th:href="@{/jardim/jardim}" class="btn btn-primary">Conhecer mais</a>
         </div>
       </div>
 
       <div class="card card3" style="width: 18rem;">
-        <img th:src="@{/img/monumento2.png}" class="card-img-top" alt="...">
+        <img th:src="@{/img/img2/monumentoNoiteD.jpeg}" class="card-img-top" alt="...">
         <div id="oMonumento" class="card-body">
           <h5 class="card-title">O monumento</h5>
           <p class="card-text">Um monumento criado pelos maiores artista do mundo, utlizando o estilo de pop art com cores fortes e unicidade.</p>
@@ -118,25 +116,71 @@
           
       </div>
       <br>
+      <!--
       <div class="container container-cargo-btn-novo ">
         <a th:href="@{/index/add}"
            class="btn btn-outline-dark">
             <i class="fa fa-file"></i> Novo
         </a>
     </div>
+    -->
       <div class="comentarios">
 
-        <div class="card" 
-        th:each="comentario : ${comentarios}">
+        <div class="card">
           <div class="card-header">
-            <label th:text="${comentario.nome}"></label>
+            <label>João</label>
           </div>
           <div class="card-body">
             <blockquote class="blockquote mb-0">
-              <p th:text="${comentario.comentario}">
-                
+              <p>
+                Incrível
               </p>
-              <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+              <footer class="blockquote-footer">Este projeto está extremamente incrível!</footer>
+            </blockquote>
+          </div>
+        </div>
+
+        
+        <div class="card">
+          <div class="card-header">
+            <label>Renata</label>
+          </div>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p>
+                Maravilhoso
+              </p>
+              <footer class="blockquote-footer">Fazia anos que não via algo tão bonito!</footer>
+            </blockquote>
+          </div>
+        </div>
+
+        
+        <div class="card">
+          <div class="card-header">
+            <label>Pedro</label>
+          </div>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p>
+                Inspirador
+              </p>
+              <footer class="blockquote-footer">Confesso que fiquei inspirado com tantas coisas bonitas.</footer>
+            </blockquote>
+          </div>
+        </div>
+
+        
+        <div class="card">
+          <div class="card-header">
+            <label>Tiago</label>
+          </div>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p>
+                Nostalgico
+              </p>
+              <footer class="blockquote-footer">Isso me lembra a época que eu jogava minecraft! Muito bom relembrar.</footer>
             </blockquote>
           </div>
         </div>
@@ -148,12 +192,13 @@
           <div class="footer-box">
             <div class="company-footer">
               <h2>Equipe S.A</h2>
-              <p class="ff">cezinha & Cia</p>
+              <p class="ff">Equipe composta por 7 participantes, sendo eles Cezar, Emanuelli, Emili, Gabriel (1º ano C), Kauan, Luana e Sofia.
+                Onde a ideia principal é representar o pop art no minecraft por meio de uma cidade, com a ideia de trazer um monumento como referência desse estilo de arte, com a intenção de dar vida à própria cidade.</p>
             </div>
         </div>
         <div class="footer-box">
           <div class="articles-footer">
-            <h2>Github</h2>
+            <h2 id="h2">Github</h2>
               <ul class="footer-list footer-article-list">
                 <li>
                 <a style="text-decoration: none;" href="https://github.com/Cezar-Peterson">Cezar Peterson Campos</a>

@@ -3,6 +3,21 @@ body {
   background: linear-gradient(#00002e, #1f44e7);
 }
 
+#add {
+  background: -webkit-gradient(linear, left top, left bottom, from(#00002e), to(#1f44e7));
+  background: linear-gradient(#00002e, #1f44e7);
+  height: 100vh;
+}
+
+.coment {
+  margin-top: 80px !important;
+  font-size: 70px;
+  text-align: center;
+  color: white;
+  font-style: italic;
+  font-weight: 900;
+}
+
 .div-s-Arte {
   margin-top: 70px;
 }
@@ -60,11 +75,26 @@ body {
   text-align: center;
 }
 
+.div-inp {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.div-inp input {
+  margin-bottom: 20px;
+  width: 30vw;
+  height: calc(30vw/5);
+  border: 8px double lightblue;
+  border-radius: 12px;
+  text-align: center;
+}
+
 footer.final {
   background-color: #666;
   padding-top: 5em;
   padding-bottom: 40px;
   border-top: 5px solid #3381f3;
+  color: white;
 }
 
 footer.final footer h2, footer.final footer p, footer.final footer a, footer.final footer span {
@@ -79,8 +109,12 @@ footer.final a {
   text-decoration: none !important;
   outline: none !important;
   font-size: 20px !important;
-  color: #000000 !important;
+  color: #ffffff !important;
   font-weight: bold;
+}
+
+footer.final ul {
+  list-style-type: none;
 }
 
 footer.final footer ul {
@@ -89,6 +123,7 @@ footer.final footer ul {
 
 footer.final footer li {
   list-style: none;
+  list-style-type: none;
 }
 
 .footer-box {
@@ -188,7 +223,7 @@ footer .wrapper:after {
 }
 
 .ff {
-  color: #000000 !important;
+  color: #ffffff !important;
   font-weight: bold;
 }
 
@@ -196,5 +231,15 @@ footer .wrapper:after {
   width: 80%;
   text-align: right;
   margin-bottom: 8px;
+}
+
+.Pr-foo {
+  background: -webkit-gradient(linear, left top, left bottom, from(#00002e), to(#1f44e7));
+  background: linear-gradient(#00002e, #1f44e7);
+  color: white;
+}
+
+#h2 {
+  margin-left: 30px;
 }
 /*# sourceMappingURL=scss.css.map */
