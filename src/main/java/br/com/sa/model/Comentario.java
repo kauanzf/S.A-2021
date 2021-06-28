@@ -41,12 +41,12 @@ public class Comentario {
         this.nome = nome;
     }
 
-    public String getComentario() {
+    public String getOpiniao() {
         return opiniao;
     }
 
-    public void setComentario(String comentario) {
-        this.opiniao = comentario;
+    public void setOpiniao(String opiniao) {
+        this.opiniao = opiniao;
     }
 
     public String getTitulo() {

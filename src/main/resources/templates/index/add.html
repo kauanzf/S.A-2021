@@ -54,27 +54,26 @@
     </nav>
 </center>
 
-<!-- 
+
 <h1 class="coment">Comentário</h1>
 <div class="container div-inp">
 
 <form th:action="@{/index/save}" method="post" th:object="${comentario}">
-
+    
 <input type="text" required th:field="*{nome}" onchange="input()" id="input1" class="input" placeholder="Digite seu nome aqui">
 <br>
 <input type="text" required th:field="*{titulo}" onchange="input()" id="input2" class="input" placeholder="Digite o título">
 <br>
-<input type="text" required th:field="*{opiniao}" onchange="input()" id="input3" class="input" placeholder="Digite seu comentário">
-
-
-<br>
--->
+    <input type="text" required th:field="*{opiniao}" onchange="input()"  id="input3" class="input" placeholder="Digite o comentário">
+    <br>
 
 
 
-<div class="container">
-<button type="submit">Salvar</button>
-</div>
+
+    <button class=" btn btn-outline-success btn-form" type="submit">
+        <i class="fa fa-save"></i> Salvar
+    </button>
+    
 </form>
 
 </div>
@@ -98,28 +97,31 @@
     </div>
 <!--JS-->
 <script th:src="@{/js/jquery-3.6.0.min.js}"></script>
-<script src="@{/js/popper.min.js}"></script>
+<!--<script src="@{/js/popper.min.js}"></script>-->
 <script th:src="@{/bootstrap-5.0.0/js/bootstrap.min.js}"></script>
 
-<!--
+
 <script>
 
     
     function input(){
         x1 = document.getElementById("input1").value 
         x2 = document.getElementById("input2").value 
-        x3 = document.getElementById("input3").value 
+        x3 = document.getElementById("input3").value
 
         if(x1 === ""){
-            document.getElementById("nome").innerHTML = "nome"    
+            document.getElementById("nome").innerHTML = "nome"   
+            console.log("a1"); 
         }else{
             document.getElementById("nome").innerHTML = x1
+            console.log("a2");
         }
         if(x2 === ""){
             document.getElementById("titulo").innerHTML = "Bom"
         }else{
             document.getElementById("titulo").innerHTML = x2
         }
+        
         if(x3 === ""){
             document.getElementById("comentario").innerHTML = "Está incrivelmente perfeito."
         }else{
@@ -127,11 +129,11 @@
         }
 
         
-        
+    
         
 
     }
 </script>
--->
+
 </body>
 </html>

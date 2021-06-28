@@ -233,6 +233,16 @@ footer .wrapper:after {
   margin-bottom: 8px;
 }
 
+.container-cargo-btn-novo a {
+  color: #fff;
+  background-color: #212529;
+  border-color: #212529;
+}
+
+.container-cargo-btn-novo a:hover {
+  background-color: transparent;
+}
+
 .Pr-foo {
   background: -webkit-gradient(linear, left top, left bottom, from(#00002e), to(#1f44e7));
   background: linear-gradient(#00002e, #1f44e7);
@@ -241,5 +251,16 @@ footer .wrapper:after {
 
 #h2 {
   margin-left: 30px;
+}
+
+.btn-form {
+  margin-bottom: 3%;
+  color: white;
+  background-color: #198754;
+}
+
+.btn-form:hover {
+  background-color: transparent;
+  color: #198754;
 }
 /*# sourceMappingURL=scss.css.map */

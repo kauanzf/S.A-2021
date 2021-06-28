@@ -243,6 +243,17 @@ footer li{
   width:80%;
   text-align: right;
   margin-bottom: 8px;
+  a{
+  color: #fff;
+    background-color: #212529;
+    border-color: #212529;
+
+    &:hover{
+      background-color: transparent;
+
+    }
+
+  }
 }
 
 .Pr-foo{
@@ -252,4 +263,14 @@ footer li{
 
 #h2{
   margin-left: 30px;
+}
+
+.btn-form{
+  margin-bottom: 3%;
+    color: white;
+    background-color: #198754;
+    &:hover{
+      background-color: transparent;
+      color: #198754;
+    }
 }
