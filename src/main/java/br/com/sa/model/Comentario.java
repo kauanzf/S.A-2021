@@ -25,6 +25,10 @@ public class Comentario {
     @NotNull
     private String opiniao;
 
+    @Size(max = 120)
+    @NotNull
+    private String dia;
+
     public Long getId() {
         return id;
     }
@@ -57,13 +61,22 @@ public class Comentario {
         this.titulo = titulo;
     }
 
+    public String getDia() {
+        return dia;
+    }
+
+    public void setDia(String dia) {
+        this.dia = dia;
+    }
+
     @Override
     public String toString() {
         return "Comentario{" +
                 "id=" + id +
                 ", titulo='" + titulo + '\'' +
                 ", nome='" + nome + '\'' +
-                ", comentario='" + opiniao + '\'' +
+                ", opiniao='" + opiniao + '\'' +
+                ", dia='" + dia + '\'' +
                 '}';
     }
 }

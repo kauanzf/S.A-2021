@@ -245,18 +245,27 @@ footer li{
 
 .container-cargo-btn-novo {
   width:80%;
+  margin-right: 10%;
   text-align: right;
   margin-bottom: 8px;
   a{
-  color: #fff;
-    background-color: #212529;
-    border-color: #212529;
-
+    width: calc(10vw);
+    height: calc(2.5vw);
+    font-size: calc(1vw) !important;
+    background-color: #0078bd;
+    color: white;
+    font-size: calc(2.5vw);
+    border-radius: 0.8vw;
+    border: 3px solid #0dcaf0;
+    -webkit-transition: .4s;
+    transition: .4s;
     &:hover{
       background-color: transparent;
-
+      border-color: #0dcaf0;
     }
-
+    i{
+      font-size: calc(1vw);
+    }
   }
 }
 
@@ -311,4 +320,14 @@ footer li{
   box-shadow: 0 0 20px rgb(255, 0, 0);
       transform: scale(1.05);
       
+}
+
+.dataDiv{
+text-align: end;
+}
+#input4{
+  width: 0;
+    height: 0;
+    background-color: transparent;
+    border: 0;
 }

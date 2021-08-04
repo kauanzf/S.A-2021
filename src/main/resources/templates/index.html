@@ -33,32 +33,28 @@
                   Cards
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a onclick="predio()" class="dropdown-item" href="#divCard">O Prédio</a></li>
-                  <li><a onclick="jardim()" class="dropdown-item" href="#divCard">O jardim</a></li>
+                  <li><a onclick="predio()" class="dropdown-item" href="#tp">O Prédio</a></li>
+                  <li><a onclick="jardim()" class="dropdown-item" href="#tp">O jardim</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a onclick="monumento()" class="dropdown-item" href="#divCard">O monumento</a></li>
+                  <li><a onclick="monumento()" class="dropdown-item" href="#tp">O monumento</a></li>
                 </ul>
               </li>
     
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
           </div>
         </div>
       </nav>
     </center>
 
-    <!-- <div class="star"></div>-->
+    <!-- TITULO-->
 
       <div class="div-s-Arte">
           <h2>SEMANA DE ARTE - SENAI 2021</h2>
       </div>
 
-
+<!-- CARROSSEL -->
       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
+        <div id="tp" class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
@@ -72,6 +68,8 @@
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10" aria-label="Slide 11"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="11" aria-label="Slide 12"></button>
 
+
+          
         </div>
         <div id="Carrossel" class="carousel-inner">
           <div class="carousel-item active">
@@ -120,44 +118,8 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      <!--
-      <div class="container col d-flex justify-content-center" id="divCards">
           
-          <div>
-             <div class="card" style="width: 18rem;">
-        <img th:src="@{/img/img2/fachada.jpeg}" class="card-img-top" alt="...">
-        <div id="oPredio" class="card-body">
-          <h5 class="card-title">O Prédio</h5>
-          <p class="card-text">Um prédio pensado e criado pelos arquitetos mais renomados do mundo, entregando luxo e conforto aos seus residentes. </p>
-          <a th:href="@{/predio/predio}"class="btn btn-primary">Conhecer mais</a>
-        </div>
-      </div>
-
-      <div class="card card2" style="width: 18rem;">
-        <img th:src="@{/img/img2/JardimDiagonal.jpeg}" class="card-img-top" alt="...">
-        <div id="oJardim" class="card-body">
-          <h5 class="card-title">O Jardim</h5>
-          <p class="card-text">O jardim Andy Warhol é de mais alto nível possível, com correntes de água, fonte, áreas de lazer e muito mais.</p>
-          <a th:href="@{/jardim/jardim}" class="btn btn-primary">Conhecer mais</a>
-        </div>
-      </div>
-
-      <div class="card card3" style="width: 18rem;">
-        <img th:src="@{/img/img2/monumentoNoiteD.jpeg}" class="card-img-top" alt="...">
-        <div id="oMonumento" class="card-body">
-          <h5 class="card-title">O monumento</h5>
-          <p class="card-text">Um monumento criado pelos maiores artista do mundo, utlizando o estilo de pop art com cores fortes e unicidade.</p>
-          <a th:href="@{/monumento/monumento}" class="btn btn-primary">Conhecer mais</a>
-        </div>
-      </div>  
-
-
-
-
-      </div>
-      </div> -->
-
-
+      <!-- CARDS -->
       <div class=" container divCard" id="divCard">
         <div class="card" id="predio" style="width: 18rem;">
           <img th:src="@{/img/img2/fachada.jpeg}" class="card-img-top" alt="...">
@@ -233,28 +195,33 @@
         </a>
     </div>
     
-    
-      <div class="comentarios">
+    <!-- COMENTÁRIOS -->
+    <div class="comentarios">
 
 
-        <div class="card" th:each="comentario : ${comentarios}">
-          <div class="card-header">
+      <div class="card" th:each="comentario : ${comentarios}">
+        <div class="card-header row">
+          <div class="nomeDiv col-8">
             <label th:text="${comentario.nome}"></label>
           </div>
-          <div class="card-body">
-            <blockquote class="blockquote mb-0">
-              <p th:text="${comentario.titulo}">
-                
-              </p>
-              <footer class="blockquote-footer" th:text="${comentario.opiniao}"></footer>
-            </blockquote>
+          <div class="dataDiv col-4">
+            <label th:text="${comentario.dia}"></label>
           </div>
         </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p th:text="${comentario.titulo}">
+              
+            </p>
+            <footer class="blockquote-footer" th:text="${comentario.opiniao}"></footer>
+          </blockquote>
+        </div>
+      </div>
+
+  </div>
 
 
-
-    </div>
-   
+        <!-- FOOTER -->
     <footer class="final" th:style="'background: url(/img/pop-art-body.jpg);'">
       <div class="wrapper"> 
           <div class="footer-box">

@@ -44,7 +44,7 @@ function predio(){
         document.getElementById("predio").classList.remove("view")
     }, 2000)
 
-    window.scrollBy(0,-500)
+    //window.scrollBy(0,-500)
 }
 
 
@@ -71,4 +71,9 @@ function monumento(){
 }
 
 
-
+/*
+var now = new Date();
+function date(){
+document.getElementById("date").innerHTML = now.getDate()+"/"+now.getMonth()+"/"+now.getFullYear()
+}
+*/

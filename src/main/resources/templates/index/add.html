@@ -25,28 +25,16 @@
                         <a class="nav-link " aria-current="page" th:href="@{/}">Principal</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" th:href="@{/predio/predio}">teste</a>
+                        <a class="nav-link" aria-current="page" th:href="@{/predio/predio}">Prédio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#Carrossel">Carrossel</a>
+                        <a class="nav-link " aria-current="page" th:href="@{/jardim/jardim}">Jardim</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Cards
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#oPredio">O Prédio</a></li>
-                            <li><a class="dropdown-item" href="#oJardim">O jardim</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#oMonumento">O monumento</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" th:href="@{/monumento/monumento}">Monumento</a>
                     </li>
 
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
             </div>
         </div>
     </nav>
@@ -64,7 +52,8 @@
 <br>
     <input type="text" required th:field="*{opiniao}" onchange="input()"  id="input3" class="input" placeholder="Digite o comentário">
     <br>
-
+    <input type="text" readonly th:field="*{dia}" onchange="input()"  id="input4" class="input" placeholder="Digite o comentário">
+    
 
 
 
@@ -80,9 +69,14 @@
 
 
     <div class="card">
-      <div class="card-header">
-        <label id="nome">Nome</label>
-      </div>
+        <div class="card-header row">
+            <div class="nomeDiv col-8">
+              <label id="nome">Cezar</label>
+            </div>
+            <div class="dataDiv col-4" >
+              <label id="dia">01/01/2021</label>
+            </div>
+          </div>
       <div class="card-body">
         <blockquote class="blockquote mb-0">
           <p id="titulo">
@@ -100,13 +94,15 @@
 
 
 <script>
-
-    
+const d = new Date();
+document.getElementById("input4").value =(d.getDate()+"/"+ parseInt(d.getMonth()+1) +"/"+d.getFullYear());
+  
     function input(){
         x1 = document.getElementById("input1").value 
         x2 = document.getElementById("input2").value 
         x3 = document.getElementById("input3").value
-
+        x4 = document.getElementById("input4").value
+        
         if(x1 === ""){
             document.getElementById("nome").innerHTML = "nome"   
             console.log("a1"); 
@@ -125,6 +121,13 @@
         }else{
             document.getElementById("comentario").innerHTML = x3
         }
+
+        if(x4 === ""){
+            document.getElementById("dia").innerHTML = "01/01/2021"
+        }else{
+            document.getElementById("dia").innerHTML = x4
+        }
+
 
         
     
